@@ -16,14 +16,14 @@ def class_setup_teardown():
 def test_setup_teardown(request):
     print('start of the test')
     options = Options()
-    options.add_experimental_option('detach', True)
     options.add_argument("--start-maximized")
+    options.add_experimental_option('detach', True)
+    options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.set_page_load_timeout(10)
 
     yield driver
 
-    driver.quit()
-
+    # driver.quit()
     print('end of the test')

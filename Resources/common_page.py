@@ -22,11 +22,16 @@ class Common(Data):
             raise Exception(f"Error: Input field {locator} is not visible after {timeout} sec(s)")
 
     def click_on(self, locator: tuple, timeout=5):
-        element = self.wait_until_element_visible(locator=locator, timeout=timeout)
-        if bool(element):
-            element.click()
-        else:
-            raise Exception(f"Error: Element {locator} is not visible after {timeout} sec(s)")
+        try:
+            WebDriverWait(self.driver, timeout).until(
+                EC.visibility_of_element_located(locator)).click()
+        except TimeoutException:
+            raise Exception(f"Error: Input field {locator} is not visible after {timeout} sec(s)")
+        # element = self.wait_until_element_visible(locator=locator, timeout=timeout)
+        # if bool(element):
+        #     element.click()
+        # else:
+        #     raise Exception(f"Error: Element {locator} is not visible after {timeout} sec(s)")
 
     def wait_until_element_visible(self, locator: tuple, timeout: int):
         try:

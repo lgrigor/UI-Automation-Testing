@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # Configurable Variables
-PYTEST_TAG=API
+PYTEST_TAG=ui
 PARALLEL_EXEC=2
 
 # Paths
@@ -16,7 +16,7 @@ ALLURE_REPORT_HISTORY="$ALLURE_REPORT_DIR/history"
 pytest_runner() {
   printf "\nEXECUTOR: PyTest Execution Started...\n"
   echo "EXECUTOR: PyTest Execution Log -> $PYTEST_LOG"
-  echo "EXECUTOR: pytest -s --alluredir=$PYTEST_RESULT $PYTEST_TAG $PARALLEL_EXEC"
+  echo "EXECUTOR: pytest -s --alluredir=$PYTEST_RESULT -m $PYTEST_TAG -n $PARALLEL_EXEC"
   pytest -s --alluredir="$PYTEST_RESULT" -m "$PYTEST_TAG" -n "$PARALLEL_EXEC"> "$PYTEST_LOG"
 
   if grep -q 'ERROR' "$PYTEST_LOG"; then

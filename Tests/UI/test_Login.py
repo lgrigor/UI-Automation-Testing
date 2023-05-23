@@ -1,11 +1,11 @@
-from Resources.login_page import Login
+from Resources.Page_Objects.Login_Page import LoginPage
 import allure
 import pytest
 
 
 @pytest.mark.ui
 @pytest.mark.login
-class TestLogin(Login):
+class TestLogin(LoginPage):
 
     @allure.title("Test Login With Standard User")
     @allure.severity(allure.severity_level.CRITICAL)
@@ -51,8 +51,8 @@ class TestLogin(Login):
     @allure.title("Test Loging Wrong Username or Password")
     @allure.severity(allure.severity_level.MINOR)
     @pytest.mark.parametrize("username, password", [
-        (Login.STANDARD_USERNAME, "fake_password"),
-        ("fake_username", Login.PASSWORD),
+        (LoginPage.STANDARD_USERNAME, "fake_password"),
+        ("fake_username", LoginPage.PASSWORD),
         ("fake_username", "fake_password"),
     ])
     def test_login_bruteforce_0005(self, username, password, request):

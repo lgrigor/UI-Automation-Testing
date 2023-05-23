@@ -1,10 +1,13 @@
-from Data.data import Data
+from Resources.Data.Data import Data
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
 
-class Common(Data):
+class CommonPage(Data):
+    ERROR_MESSAGE_CONTAINER = (By.XPATH, "//h3[@data-test='error']")
+    ERROR_MESSAGE_CLOSE_BUTTON = (By.CLASS_NAME, "error-button")
 
     def open_browser(self, request):
         self.driver = request.getfixturevalue("test_setup_teardown")
@@ -39,4 +42,11 @@ class Common(Data):
             return element
         except TimeoutException:
             print(f"Warning: Element {locator} is not visible after {timeout} sec(s)")
+            return False
+
+    def verify_error_message_is_visible(self, locator: tuple, expected_error_message: str, timeout: int):
+        error_message = self.wait_until_element_visible(locator=locator, timeout=timeout)
+        if bool(error_message):
+            return error_message.text == expected_error_message
+        else:
             return False

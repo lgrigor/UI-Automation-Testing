@@ -10,7 +10,7 @@ class TestProducts(HomePage, LoginPage):
 
     @allure.title("Test")
     @allure.severity(allure.severity_level.CRITICAL)
-    def test_add_to_cart_product_0001(self, request):
+    def test_add_to_cart_product_0201(self, request):
         self.open_browser(request)
         self.navigate_to_home_page()
         self.input_username(username=self.STANDARD_USERNAME)
@@ -28,7 +28,7 @@ class TestProducts(HomePage, LoginPage):
 
     @allure.title("Test")
     @allure.severity(allure.severity_level.CRITICAL)
-    def test_remove_product_0002(self, request):
+    def test_remove_product_0202(self, request):
         self.open_browser(request)
         self.navigate_to_home_page()
         self.input_username(username=self.STANDARD_USERNAME)

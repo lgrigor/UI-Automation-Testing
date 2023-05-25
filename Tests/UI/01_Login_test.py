@@ -9,7 +9,7 @@ class TestLogin(LoginPage):
 
     @allure.title("Test Login With Standard User")
     @allure.severity(allure.severity_level.CRITICAL)
-    def test_login_standard_user_0001(self, request):
+    def test_login_standard_user_0101(self, request):
         self.open_browser(request)
         self.navigate_to_home_page()
         self.input_username(username=self.STANDARD_USERNAME)
@@ -19,7 +19,7 @@ class TestLogin(LoginPage):
 
     @allure.title("Test Login With Blocked User")
     @allure.severity(allure.severity_level.CRITICAL)
-    def test_login_blocked_user_0002(self, request):
+    def test_login_blocked_user_0102(self, request):
         self.open_browser(request)
         self.navigate_to_home_page()
         self.input_username(username=self.BLOCKED_USERNAME)
@@ -30,7 +30,7 @@ class TestLogin(LoginPage):
 
     @allure.title("Test Loging Without Username")
     @allure.severity(allure.severity_level.MINOR)
-    def test_login_without_username_0003(self, request):
+    def test_login_without_username_0103(self, request):
         self.open_browser(request)
         self.navigate_to_home_page()
         self.input_password(password=self.PASSWORD)
@@ -40,7 +40,7 @@ class TestLogin(LoginPage):
 
     @allure.title("Test Loging Without Password")
     @allure.severity(allure.severity_level.MINOR)
-    def test_login_without_password_0004(self, request):
+    def test_login_without_password_0104(self, request):
         self.open_browser(request)
         self.navigate_to_home_page()
         self.input_username(username=self.STANDARD_USERNAME)
@@ -55,7 +55,7 @@ class TestLogin(LoginPage):
         ("fake_username", LoginPage.PASSWORD),
         ("fake_username", "fake_password"),
     ])
-    def test_login_bruteforce_0005(self, username, password, request):
+    def test_login_bruteforce_0105(self, username, password, request):
         self.open_browser(request)
         self.navigate_to_home_page()
         self.input_username(username=username)

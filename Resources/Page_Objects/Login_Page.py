@@ -33,24 +33,24 @@ class LoginPage(CommonPage):
         return bool(self.wait_until_element_visible(locator=self.INVENTORY_PAGE, timeout=timeout))
 
     def verify_blocked_user_error_message_is_visible(self, timeout):
-        self.verify_error_message_is_visible(locator=self.ERROR_MESSAGE_CONTAINER,
-                                             expected_error_message=self.BLOCKED_USER_ERROR_MESSAGE,
-                                             timeout=timeout)
+        return self.verify_error_message_is_visible(locator=self.ERROR_MESSAGE_CONTAINER,
+                                                    expected_error_message=self.BLOCKED_USER_ERROR_MESSAGE,
+                                                    timeout=timeout)
 
     def verify_missing_username_error_message_is_visible(self, timeout):
-        self.verify_error_message_is_visible(locator=self.ERROR_MESSAGE_CONTAINER,
-                                             expected_error_message=self.MISSING_USERNAME_ERROR_MESSAGE,
-                                             timeout=timeout)
+        return self.verify_error_message_is_visible(locator=self.ERROR_MESSAGE_CONTAINER,
+                                                    expected_error_message=self.MISSING_USERNAME_ERROR_MESSAGE,
+                                                    timeout=timeout)
 
     def verify_missing_password_error_message_is_visible(self, timeout):
-        self.verify_error_message_is_visible(locator=self.ERROR_MESSAGE_CONTAINER,
-                                             expected_error_message=self.MISSING_PASSWORD_ERROR_MESSAGE,
-                                             timeout=timeout)
+        return self.verify_error_message_is_visible(locator=self.ERROR_MESSAGE_CONTAINER,
+                                                    expected_error_message=self.MISSING_PASSWORD_ERROR_MESSAGE,
+                                                    timeout=timeout)
 
     def verify_wrong_username_or_password_error_message_is_visible(self, timeout):
-        self.verify_error_message_is_visible(locator=self.ERROR_MESSAGE_CONTAINER,
-                                             expected_error_message=self.WRONG_USER_OR_PASS_ERROR_MESSAGE,
-                                             timeout=timeout)
+        return self.verify_error_message_is_visible(locator=self.ERROR_MESSAGE_CONTAINER,
+                                                    expected_error_message=self.WRONG_USER_OR_PASS_ERROR_MESSAGE,
+                                                    timeout=timeout)
 
     def verify_error_close_button_is_visible(self, timeout):
         return bool(self.wait_until_element_visible(locator=self.ERROR_MESSAGE_CLOSE_BUTTON, timeout=timeout))

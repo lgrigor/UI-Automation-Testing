@@ -1,17 +1,57 @@
-# Saucedemo UI Automation Test Suite and Architecture
+# UI Automation Test Suite and Architecture
+
+[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+
 
 The purpose of automation is to demonstrate an example of how to efficiently and effectively automate the testing process for the www.saucedemo.com website. By providing a comprehensive UI automation test suite and a well-designed automation architecture, this repository serves as a practical demonstration of automating repetitive and time-consuming tasks involved in testing the website.
 
-Automation offers several benefits, including
-
-* Increased Efficiency: With automation, repetitive test cases can be executed quickly and consistently, reducing the time and effort required for manual testing. It allows for faster feedback on the stability and functionality of the website.
-
-* Improved Test Coverage: Automation enables the execution of a larger number of test cases, covering various scenarios and edge cases. This helps in identifying potential issues or bugs that might be missed during manual testing.
-
-* Regression Testing: By automating the test suite, it becomes easier to perform regression testing. Any changes or updates made to the website can be quickly validated against existing test cases, ensuring that previously working features haven't been impacted.
-
-* Increased Accuracy: Automated tests follow predefined steps and eliminate the possibility of human errors during test execution. This leads to more accurate and reliable results.
-
-* Reusability and Maintainability: The automation architecture employed in this repository promotes reusability of test components, such as page objects, test data, and utility functions. This makes it easier to maintain and update the test suite as the website evolves over time.
-
 Overall, this repository serves as an example of how automation can significantly enhance the testing process by saving time, increasing efficiency, improving test coverage, and providing reliable results. It demonstrates best practices and showcases a structured approach to UI automation for the Saucedemo website, serving as a valuable resource for individuals or teams looking to adopt automation in their testing workflows.
+
+<br>
+
+## Table of Contents
+
+- [Features](#features)
+- [Contact](#contact)
+
+
+<br>
+
+## Features
+
+### Naming Conventions
+The project follows a consistent and structured naming convention for test files and test cases.
+
+* Test Suite: Each test suite is named with a specific format, such as `01_Login_test.py` where the two digits at the beginning indicate the test suite number (01 in this example).
+
+* Test Case: Each test case within a test suite is named with a descriptive format, such as `test_login_standard_user_0102` where the first two digits at the end (02) correspond to the test suite number, and the last two digits (02) indicate the test case number.
+
+<br>
+
+### Selective Test Execution
+The architecture supports selective execution of specific test cases using the pytest -k option. By providing the corresponding test case identifier, such as `-k "0102"` you can instruct pytest to execute only the test case with the matching identifier.
+
+<br>
+
+### Parallel Execution
+The architecture supports parallel execution of test cases, allowing for faster and more efficient testing.
+
+<br>
+
+### Allure Report Integration
+The architecture seamlessly integrates with Allure, a powerful test report generation tool. It automatically generates detailed and visually appealing reports for the test execution results.
+
+<br>
+
+### Regression Run History
+This architecture maintains a history of previous regression runs, allowing you to keep track of test execution results over time.
+
+<br>
+
+### Contact
+
+
+
+
+
+

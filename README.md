@@ -12,7 +12,6 @@ Overall, this repository serves as an example of how automation can significantl
 ## Table of Contents
 
 - [Features](#features)
-- [Contact](#contact)
 
 
 <br>
@@ -47,11 +46,3 @@ The architecture seamlessly integrates with Allure, a powerful test report gener
 This architecture maintains a history of previous regression runs, allowing you to keep track of test execution results over time.
 
 <br>
-
-### Contact
-
-
-
-
-
-

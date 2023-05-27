@@ -1,0 +1,17 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Test Loging Without Username",
+    "uid" : "829e21632330c325",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1685199649615,
+      "stop" : 1685199651410,
+      "duration" : 1795
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ]
+}

@@ -1,0 +1,19 @@
+[ {
+  "values" : [ "0103" ],
+  "name" : "Test.Filter.Name"
+}, {
+  "values" : [ "ui" ],
+  "name" : "Test.Filter.Mark"
+}, {
+  "values" : [ "QA" ],
+  "name" : "Server"
+}, {
+  "values" : [ "Version: 2.9.45" ],
+  "name" : "Allure.Version"
+}, {
+  "values" : [ "4" ],
+  "name" : "Pytest.Parallel.Execution"
+}, {
+  "values" : [ "Version: 7.3.1" ],
+  "name" : "Pytest.Version"
+} ]

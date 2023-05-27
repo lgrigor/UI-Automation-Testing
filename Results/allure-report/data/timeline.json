@@ -1,0 +1,25 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "WIN-QM7UVAG84KH",
+    "children" : [ {
+      "name" : "10228-MainThread",
+      "children" : [ {
+        "name" : "Test Loging Without Username",
+        "uid" : "829e21632330c325",
+        "parentUid" : "def6d22740302159f833cc783f5e4136",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685199649615,
+          "stop" : 1685199651410,
+          "duration" : 1795
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "def6d22740302159f833cc783f5e4136"
+    } ],
+    "uid" : "8d775fc931fd7c86000d46d2f6ae4860"
+  } ]
+}

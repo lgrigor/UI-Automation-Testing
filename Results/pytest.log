@@ -1,0 +1,10 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.1, pytest-7.3.1, pluggy-1.0.0
+rootdir: C:\Users\Levon Grigoryan\PycharmProjects\UI-Automation-Testing
+configfile: pytest.ini
+plugins: allure-pytest-2.9.45, ast-transformer-1.0.3, bdd-6.1.1, env-0.6.2, forked-1.4.0, html-3.1.1, metadata-2.0.1, ordering-0.6, rerunfailures-10.2, soft-assertions-0.1.2, xdist-2.5.0
+gw0 I / gw1 I / gw2 I / gw3 I
+gw0 [1] / gw1 [1] / gw2 [1] / gw3 [1]
+
+.                                                                        [100%]
+============================= 1 passed in 17.15s ==============================

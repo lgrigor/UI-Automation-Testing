@@ -1,0 +1,179 @@
+{
+  "uid" : "829e21632330c325",
+  "name" : "Test Loging Without Username",
+  "fullName" : "Tests.UI.01_Login_test.TestLogin#test_login_without_username_0103",
+  "historyId" : "e8255c6ed9224b3ced393a125d34910f",
+  "time" : {
+    "start" : 1685199649615,
+    "stop" : 1685199651410,
+    "duration" : 1795
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "class_setup_teardown",
+    "time" : {
+      "start" : 1685199646557,
+      "stop" : 1685199646557,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "test_setup_teardown",
+    "time" : {
+      "start" : 1685199646557,
+      "stop" : 1685199649607,
+      "duration" : 3050
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a435af1b607e200e",
+      "name" : "log",
+      "source" : "a435af1b607e200e.txt",
+      "type" : "text/plain",
+      "size" : 425
+    }, {
+      "uid" : "1c6e92595e6afa2d",
+      "name" : "stdout",
+      "source" : "1c6e92595e6afa2d.txt",
+      "type" : "text/plain",
+      "size" : 53
+    }, {
+      "uid" : "180dcb529f87d168",
+      "name" : "stderr",
+      "source" : "180dcb529f87d168.txt",
+      "type" : "text/plain",
+      "size" : 251
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "class_setup_teardown::0",
+    "time" : {
+      "start" : 1685199654012,
+      "stop" : 1685199654012,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "test_setup_teardown::0",
+    "time" : {
+      "start" : 1685199651410,
+      "stop" : 1685199654012,
+      "duration" : 2602
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "minor"
+  }, {
+    "name" : "tag",
+    "value" : "login"
+  }, {
+    "name" : "tag",
+    "value" : "ui"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Tests.UI"
+  }, {
+    "name" : "suite",
+    "value" : "01_Login_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "WIN-QM7UVAG84KH"
+  }, {
+    "name" : "thread",
+    "value" : "10228-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Tests.UI.01_Login_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "minor",
+    "retries" : [ {
+      "uid" : "32ecab64f0cc107b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1685199473978,
+        "stop" : 1685199478245,
+        "duration" : 4267
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "d77f1cb636f2b31a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1685199473978,
+          "stop" : 1685199478245,
+          "duration" : 4267
+        }
+      } ]
+    },
+    "tags" : [ "ui", "login" ]
+  },
+  "source" : "829e21632330c325.json",
+  "parameterValues" : [ ]
+}

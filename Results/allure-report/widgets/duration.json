@@ -1,0 +1,11 @@
+[ {
+  "uid" : "829e21632330c325",
+  "name" : "Test Loging Without Username",
+  "time" : {
+    "start" : 1685199649615,
+    "stop" : 1685199651410,
+    "duration" : 1795
+  },
+  "status" : "passed",
+  "severity" : "minor"
+} ]

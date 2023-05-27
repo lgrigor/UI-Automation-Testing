@@ -1,0 +1,29 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Tests.UI",
+    "children" : [ {
+      "name" : "01_Login_test",
+      "children" : [ {
+        "name" : "TestLogin",
+        "children" : [ {
+          "name" : "Test Loging Without Username",
+          "uid" : "829e21632330c325",
+          "parentUid" : "dce564a5566e72051c73b344379df882",
+          "status" : "passed",
+          "time" : {
+            "start" : 1685199649615,
+            "stop" : 1685199651410,
+            "duration" : 1795
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "dce564a5566e72051c73b344379df882"
+      } ],
+      "uid" : "349baa61d31fe36abf6d9871974efcf7"
+    } ],
+    "uid" : "fb5ab1602ab693885bb69161b876f783"
+  } ]
+}

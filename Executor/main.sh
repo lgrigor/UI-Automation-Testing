@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
 # Configurable Variables
-PARALLEL_EXEC=4
 TEST_MARK="ui"
 TEST_NAME="0103"
+PARALLEL_EXEC=4
 
 
 # Paths

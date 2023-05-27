@@ -25,10 +25,14 @@ The project follows a consistent and structured naming convention for test files
 
 * Test Case: Each test case within a test suite is named with a descriptive format, such as `test_login_standard_user_0102` where the first two digits at the end (02) correspond to the test suite number, and the last two digits (02) indicate the test case number.
 
+![Screenshot](https://raw.githubusercontent.com/lgrigor/UI-Automation-Testing/main/Documentation/readme_naming.PNG)
+
 <br>
 
 ### Selective Test Execution
 The architecture supports selective execution of specific test cases using the pytest `TEST_MARK` and `TEST_NAME` configurable variables. By providing the corresponding test case identifier, such as `0102` you can instruct pytest to execute only the test case with the matching name identifier. Or by providing the test tag marker, such as `login` test cases assosiated with login feature will be executed
+
+![Screenshot](https://raw.githubusercontent.com/lgrigor/UI-Automation-Testing/main/Documentation/readme_configurable_variables.PNG)
 
 <br>
 <br>

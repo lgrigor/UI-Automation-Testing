@@ -79,8 +79,8 @@ add_env_properties() {
   printf "\nMAIN-RUNNING: Adding environment properties file\n"
   {
     echo Server=QA
-    echo Test.Filter.Mark=TEST_MARK
-    echo Test.Filter.Name=TEST_MARK
+    echo Test.Filter.Mark=$TEST_MARK
+    echo Test.Filter.Name=$TEST_NAME
     echo Pytest.Parallel.Execution=$PARALLEL_EXEC
     echo "Pytest.Version=$(pip show pytest | grep Version)"
     echo "Allure.Version=$(pip show allure-pytest | grep Version)"

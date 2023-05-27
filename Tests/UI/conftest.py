@@ -11,6 +11,9 @@ import sys
 import os
 import re
 
+import allure
+from allure_commons.types import AttachmentType
+
 root = os.path.abspath(os.path.join(os.path.dirname(__file__), r"..\.."))
 sys.path.append(root)
 
@@ -26,7 +29,7 @@ def class_setup_teardown():
 
 @pytest.fixture(scope='function', autouse=True)
 def test_setup_teardown(request):
-    print('\nTest Setup')
+    print('Test Setup')
 
     # Chrome driver initialization
     driver = initialize_chrome()
@@ -65,14 +68,24 @@ def take_screenshot(driver, test_name):
 
 
 def pytest_runtest_protocol(item):
-    reports = runtestprotocol(item, nextitem=None)
+    reports = runtestprotocol(item)
     for report in reports:
         if report.when == "call":
-            print(report.outcome)
-            if report.outcome == "passed":
-                try:
-                    time.sleep(0.5)
-                    os.remove(os.getenv("TestScreenshot"))  # Delete the screenshot if test case passed
-                except FileNotFoundError:
-                    print(f"Warning: Screenshot wasn't find - {os.getenv('TestScreenshot')}")
+            time.sleep(0.5)
+            screenshot_path = os.getenv("TestScreenshot")
+
+            if screenshot_path:
+
+                if report.outcome == "passed":
+                    os.remove(screenshot_path)
+                elif report.outcome == "failed":
+                    allure.attach.file(source=screenshot_path, name="Fail Screen", attachment_type=AttachmentType.PNG)
+                else:
+                    print(f"Conftest-Warning: Unhandled outcome - {report.outcome}")
+
+            else:
+                print(f"Conftest-Warning: Screenshot wasn't find - {screenshot_path}")
+
+    ihook = item.ihook
+    ihook.pytest_runtest_logfinish(nodeid=item.nodeid, location=item.location)
     return True
